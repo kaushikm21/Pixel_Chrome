@@ -1,0 +1,173 @@
+/* popup.css */
+body {
+    width: 300px; /* Set the width of the popup */
+    height: auto; /* Allow the height to adjust to content */
+    margin: 0;
+    padding: 10px; /* Add padding around the content */
+    background-color: #f9f9f9; /* Set a background color */
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 25px;
+
+}
+
+
+
+#popupContainer {
+    border: 1px solid #ddd; /* Add a border around the popup */
+    border-radius: 8px; /* Optional: Round the corners */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+#imageInput {
+    width: calc(100% - 20px); /* Subtract padding */
+    margin: 2px; /* Add some space around the input */
+}
+
+#cdnUrlDisplay {
+    border: none;
+    background-color: transparent;
+    color: inherit; /* Use the current text color */
+    font-family: inherit; /* Match the font to surrounding text */
+    font-size: inherit; /* Match the font size to surrounding text */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+#cdnListUrlDisplay {
+    border: none;
+    width: 1px;
+    background-color: transparent;
+    color: whitesmoke; /* Use the current text color */
+    font-family: inherit; /* Match the font to surrounding text */
+    font-size: 1px; /* Match the font size to surrounding text */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+button {
+    display: block; /* Make buttons block-level for full width */
+    margin: 10px; /* Add some space around buttons */
+    padding: 10px 0; /* Add padding for button height */
+    border: 1px solid #ddd; /* Add a border to the button */
+    border-radius: 4px; /* Optional: Round the corners */
+    background-color: #fff; /* Set a background color */
+    cursor: pointer; /* Change cursor to pointer */
+    text-transform: uppercase; /* Uppercase button text */
+}
+
+button#uploadButton {
+    background-color: #007bff; /* Set your desired color */
+    color: #fff; /* Set text color for visibility */
+}
+
+.settings-link {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    color: blue;
+    text-decoration: underline;
+}
+
+.list-images {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    color: blue;
+    text-decoration: underline;
+}
+.search-images{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Add more styles based on your specific needs */
+.custom-file-upload {
+    display: inline-block;
+    padding: 3px 2px;
+    cursor: pointer;
+    margin: 1px; /* Add some space around the button */
+    background-color: #fff; /* Set your desired color */
+    color: #fff; /* Set text color for visibility */
+    text-align: center;
+    align-items: center;
+    border-radius: 1px; /* Optional: Round the corners */
+}
+#progressBarContainer {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 4px;
+    margin: 10px 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #007bff;
+    text-align: center;
+    line-height: 20px; /* same as height of container */
+    color: white;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+
+#searchBar {
+    width: 200px;
+    height: 30px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: Verdana;
+    border-radius: 15px;
+    content: "search here";
+    border: 1px solid #ccc;
+}
+#blockingAuthCodeInput{
+    width: 250px;
+    height: 20px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: Verdana;
+    border-radius: 5px;
+    content: "search here";
+    border: 1px solid #ccc;
+}
+
+#spinner-container {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 2px solid #3498db;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 20px; /* Set to the height of the container */
+    width: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+

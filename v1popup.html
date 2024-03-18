@@ -1,0 +1,22 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <title>Upload Image</title>
+</head>
+<body>
+    <input type="file" id="imageInput" accept="image/*">
+    <input type="text" id="authCodeInput" placeholder="Enter PerceptPixel Auth Code">
+    <button id="uploadButton">Upload</button>
+    <button id="previewButton" style="display:none;">Preview</button>
+    
+    <!-- Buttons to Save and Retrieve Auth Code -->
+    <button id="saveAuthCodeButton">Save Auth Code</button>
+    <button id="retrieveAuthCodeButton">Retrieve Auth Code</button>
+
+    <img id="uploadedImage" style="display:none; max-width: 100%; height: auto;" />
+    <script src="popup.js"></script>
+</body>
+</html>
+

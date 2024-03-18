@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PerceptPixel Image Transformer",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "https://api.perceptpixel.com/"
+
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/chrome_pixel_logo.png",
+      "48": "images/chrome_pixel_logo.png",
+      "128": "images/chrome_pixel_logo.png"
+    }
+  }
+}
