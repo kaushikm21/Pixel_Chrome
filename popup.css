@@ -21,14 +21,14 @@ body {
 
 
 #popupContainer {
-    border: 1px solid #ddd; /* Add a border around the popup */
     border-radius: 8px; /* Optional: Round the corners */
     overflow: hidden; /* Prevent content from overflowing */
+    padding: 5px;
 }
 
 #imageInput {
     width: calc(100% - 20px); /* Subtract padding */
-    margin: 2px; /* Add some space around the input */
+    margin: 1px; /* Add some space around the input */
 }
 
 #cdnUrlDisplay {
@@ -71,7 +71,7 @@ button#uploadButton {
 .settings-link {
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 8px;
     color: blue;
     text-decoration: underline;
@@ -80,18 +80,20 @@ button#uploadButton {
 .list-images {
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 35px;
     color: blue;
     text-decoration: underline;
+    padding: 0 5px;
 }
 .search-images{
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 16px;
     right: 60px;
     color: blue;
     text-decoration: underline;
+    padding: 0 8px;
 }
 
 /* Add more styles based on your specific needs */
@@ -155,6 +157,7 @@ button#uploadButton {
     align-items: center; /* Center vertically */
     height: 20px; /* Set to the height of the container */
     width: 20px;
+    margin-left: 130px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
 }

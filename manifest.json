@@ -3,9 +3,10 @@
   "name": "PerceptPixel Image Transformer",
   "version": "1.0",
   "permissions": [
-    "storage",
-    "https://api.perceptpixel.com/"
-
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*/*"
   ],
   "background": {
     "service_worker": "background.js"

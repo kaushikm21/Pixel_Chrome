@@ -179,7 +179,7 @@ document.getElementById('uploadButton').addEventListener('click', () => {
         progressBar.style.width = '0%'; // Reset progress bar width
 
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.perceptpixel.com/media/upload', true);
+        xhr.open('POST', 'http://localhost:8000/api/v1/media/upload', true);
 
         xhr.upload.onprogress = function(event) {
             if (event.lengthComputable) {
