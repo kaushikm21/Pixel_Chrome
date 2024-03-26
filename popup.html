@@ -13,7 +13,7 @@
         <img align="left" id="back_arrow" src="images/back_arrow.png" width="18px" height="20px"
              style="visibility: hidden; padding-top: 8px">
         <img src="images/pixel_logo.png" width="180px" height="30px">
-        <br><span width="24px" height="24px" style="display: flex; justify-content: center">Optimise image load times in seconds.</span><br><br>
+        <br><span width="24px" height="24px" style="display: flex; justify-content: start; padding-left: 30px">Optimise image load times in seconds.</span><br><br>
         <input type="text" id="searchBar" placeholder="Search here..." style="display: none">
 
         <div id="spinner-container">
@@ -23,13 +23,14 @@
     <body>
     <div id="popupContainer"> <!-- Add this div -->
         <label for="imageInput" class="custom-file-upload">
-            <img id="imageSelect" src="images/select_file.png" height="55px" width="292px" alt="Select File"
+            <img id="imageSelect" src="images/select_file.png" height="55px" width="328px" alt="Select File"
                  title="Select File"/>
         </label>
         <input type="file" id="imageInput" accept="image/*" style="display: none;">
         <span id="fileName"></span>
-        <img id="uploadButton" src="images/upload.png" height="40px" width="292px" alt="Upload Images"
-             title="Upload Images"/>
+        <img id="uploadButton" src="images/upload.png" height="50px" width="332px" alt="Upload Images"
+             title="Upload Images" style="margin: 6px 0"
+        />
 
         <div id="progressBarContainer" style="display:none;">
             <div id="progressBar" style="width: 0%;"></div>
@@ -50,10 +51,11 @@
 
         <!-- Hidden Settings Screen -->
         <div id="settingsScreen" style="display:none;">
-            <input type="text" id="authCodeInput" placeholder="">
-            <img id="saveAuthCodeButton" src="images/save_auth.png" alt="Save Auth Key" title="Save Auth Key"/>
+            <input type="text" id="authCodeInput" placeholder="" style="width: 320px; height: 40px; outline: none; border: none; background-color: #EEEEEE; border-radius: 10px">
+            <img id="saveAuthCodeButton" src="images/save_auth.png" alt="Save Auth Key" title="Save Auth Key" height="0px" width="100%" style="visibility: hidden; margin: 5px 0"/>
+            <img id="removeAuthCodeButton" src="images/remove_auth.png" width="328px" height="45px">
             <button id="retrieveAuthCodeButton" style="visibility: hidden">Retrieve Auth</button>
-            <button id="removeAuthCodeButton">Remove Auth</button>
+<!--            <button id="removeAuthCodeButton" style="width: 100%">Remove Auth</button>-->
         </div>
 
 
@@ -65,8 +67,8 @@
 
         <!-- CDN URL Display and Copy Button -->
         <div id="cdnUrlContainer" style="display:none;">
-            <b>CDN: </b> <input type="text" id="cdnUrlDisplay" readonly>
-            <img id="copyCdnUrlButton" src="images/copy.png" height="24px" weight='24px'></img>
+            <b>CDN: </b> <input type="text" id="cdnUrlDisplay" readonly style="width: 250px">
+            <img id="copyCdnUrlButton" src="images/copy.png" height="24px" weight='24px' style="cursor: pointer"></img>
         </div>
 
         <img id="uploadedImage" style="display:none; max-width: 100%; height: auto;"/>

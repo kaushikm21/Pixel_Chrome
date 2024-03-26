@@ -1,24 +1,22 @@
 /* popup.css */
 body {
-    width: 300px; /* Set the width of the popup */
+    width: 338px; /* Set the width of the popup */
     height: auto; /* Allow the height to adjust to content */
     margin: 0;
     padding: 10px; /* Add padding around the content */
     background-color: #f9f9f9; /* Set a background color */
-    font-family: Verdana;
+    font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    border-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 25px;
+    border-radius: 40px;
+    /*border-top-left-radius: 10px;*/
+    /*border-top-right-radius: 15px;*/
+    /*border-bottom-right-radius: 20px;*/
+    /*border-bottom-left-radius: 25px;*/
 
 }
-
-
 
 #popupContainer {
     border-radius: 8px; /* Optional: Round the corners */
@@ -33,12 +31,13 @@ body {
 
 #cdnUrlDisplay {
     border: none;
+    outline: none;
     background-color: transparent;
     color: inherit; /* Use the current text color */
     font-family: inherit; /* Match the font to surrounding text */
     font-size: inherit; /* Match the font size to surrounding text */
     padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+    margin: 20px 0; /* Remove margins */
 }
 
 #cdnListUrlDisplay {
@@ -128,22 +127,28 @@ button#uploadButton {
 }
 
 #searchBar {
-    width: 200px;
-    height: 30px;
-    padding: 8px;
+    width: 300px;
+    height: 39px;
+    outline: none;
+    background-color: #F2F4F7;
+    padding: 6px;
+    margin: 0 14px;
     font-size: 14px;
     font-family: Verdana;
-    border-radius: 15px;
+    border-radius: 9px;
     content: "search here";
-    border: 1px solid #ccc;
+    border: 1px solid #EEEEEE;
 }
 #blockingAuthCodeInput{
-    width: 250px;
-    height: 20px;
-    padding: 8px;
+    width: 310px;
+    height: 35px;
+    outline: none;
+    background-color: #F2F4F7;
+    color: #000;
+    padding: 4px;
     font-size: 14px;
     font-family: Verdana;
-    border-radius: 5px;
+    border-radius: 9px;
     content: "search here";
     border: 1px solid #ccc;
 }
@@ -157,7 +162,9 @@ button#uploadButton {
     align-items: center; /* Center vertically */
     height: 20px; /* Set to the height of the container */
     width: 20px;
-    margin-left: 130px;
+    margin-left: 156px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
 }
