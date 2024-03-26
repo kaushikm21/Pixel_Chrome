@@ -10,11 +10,11 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    border-radius: 40px;
-    /*border-top-left-radius: 10px;*/
-    /*border-top-right-radius: 15px;*/
-    /*border-bottom-right-radius: 20px;*/
-    /*border-bottom-left-radius: 25px;*/
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 25px;
 
 }
 
@@ -31,6 +31,7 @@ body {
 
 #cdnUrlDisplay {
     border: none;
+    width: 200px;
     outline: none;
     background-color: transparent;
     color: inherit; /* Use the current text color */

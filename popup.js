@@ -443,7 +443,6 @@ var iNumResults = 0;
             listItem.style.alignItems = 'center';
             listItem.style.gap = '10px';
             listItem.style.padding = '15px 10px';
-            // listItem.style.borderBottom = '1px solid #ccc';
 
             const imgID = document.createElement("input");
             imgID.value = image.uid;
