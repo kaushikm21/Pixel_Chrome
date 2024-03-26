@@ -395,7 +395,7 @@ function listImages() {
     settingsScreen.style.display='none';
     fileNameDisplay.textContent='';
     spinnerContainer.style.display='block';
-    searchBar.style.display='none';
+    searchBar.style.display='block';
     if (authCodeInput.value.trim() !== '' || !authCodeInput.disabled) {
         fetch('https://api.perceptpixel.com/v1/media', {
             method: 'GET',
@@ -442,7 +442,8 @@ var iNumResults = 0;
             listItem.style.display = 'flex';
             listItem.style.alignItems = 'center';
             listItem.style.gap = '10px';
-            listItem.style.padding = '15px 10px';
+            listItem.style.paddingBottom = '15px';
+            listItem.style.paddingRight = '20px';
 
             const imgID = document.createElement("input");
             imgID.value = image.uid;
