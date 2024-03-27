@@ -54,9 +54,16 @@ function showAuthCodePrompt() {
     const blockingWindow = document.createElement('div');
     blockingWindow.id = 'blockingWindow';
     blockingWindow.innerHTML = `
-    <p><b>Authentication key required.</b> <br> Get it from https://perceptpixel.com >  Settings > Key .</p>
-        <input type="text" id="blockingAuthCodeInput" placeholder="Enter Authentication Code" > <br><br>
-        <image id="blockingSaveAuthCodeButton" src="images/save_auth.png" width="270px" height="40px" />
+    <p>
+        <img src="images/pixel_logo.png" alt="percept pixel" width="200" height="30">
+        <br>
+        <br>
+        <b>Authentication key required.</b> 
+        <br>
+        <h4 style="color: #616161">Get it from https://perceptpixel.com >  Settings > Key</h4> 
+    </p>
+    <input type="text" id="blockingAuthCodeInput" placeholder="Enter Authentication Code" > <br><br>
+    <image id="blockingSaveAuthCodeButton" src="images/save_auth.png" width="324px" height="50px"/>
     `;
 
     // Position the blocking window in the center
@@ -388,7 +395,7 @@ function listImages() {
     settingsScreen.style.display='none';
     fileNameDisplay.textContent='';
     spinnerContainer.style.display='block';
-    searchBar.style.display='none';
+    searchBar.style.display='block';
     if (authCodeInput.value.trim() !== '' || !authCodeInput.disabled) {
         fetch('https://api.perceptpixel.com/v1/media', {
             method: 'GET',
@@ -435,8 +442,8 @@ var iNumResults = 0;
             listItem.style.display = 'flex';
             listItem.style.alignItems = 'center';
             listItem.style.gap = '10px';
-            listItem.style.padding = '10px 0';
-            listItem.style.borderBottom = '1px solid #ccc';
+            listItem.style.paddingBottom = '15px';
+            listItem.style.paddingRight = '20px';
 
             const imgID = document.createElement("input");
             imgID.value = image.uid;
@@ -466,6 +473,7 @@ var iNumResults = 0;
                 copyCdnUrlButton.src='images/copy.png'
                 copyCdnUrlButton.style.width='24px';
                 copyCdnUrlButton.style.height='24px';
+                copyCdnUrlButton.style.margin='0 5px';
                 copyCdnUrlButton.alt = 'Copy';
                 copyCdnUrlButton.onclick = () => {
                     cdnUrlDisplay.select();
@@ -479,6 +487,7 @@ var iNumResults = 0;
                 embedButton.src='images/embed.png'
                 embedButton.style.width='24px';
                 embedButton.style.height='24px';
+                embedButton.style.margin='0 5px';
                 embedButton.alt = 'Embed';
                 embedButton.onclick = () => {
                     const embedCode = `<img src="${image.cdn_url}" alt="Embedded Image">`;

@@ -5,7 +5,6 @@
   "permissions": [
     "storage",
     "https://api.perceptpixel.com/"
-
   ],
   "background": {
     "service_worker": "background.js"

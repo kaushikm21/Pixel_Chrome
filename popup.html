@@ -1,70 +1,79 @@
 <!-- popup.html -->
 <!DOCTYPE html>
-<div >
-<html xmlns:float="http://www.w3.org/1999/xhtml">
-<head>
-    <link rel="stylesheet" type="text/css" href="popup.css">
-    <title>Upload Image</title>
+<div>
+    <html xmlns:float="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="popup.css">
+        <title>Upload Image</title>
 
-    <style>
-        /* Your existing styles go here */
-    </style>
-    <img id="blank" src="images/blank.jpg" width="14px" height="14px" style="visibility: visible"><img align="left"   id="back_arrow" src="images/back_arrow.png" width="18px" height="20px" style="visibility: hidden"><img src="images/pixel_logo.png">
-    <br><span width="24px" height="24px">Optimise image load times in seconds.</span><br><br>
-   <input type="text" id="searchBar" placeholder="Search here..." style="display: none">
+        <style>
+            /* Your existing styles go here */
+        </style>
+        <img id="blank" src="images/blank.jpg" width="14px" height="14px" style="visibility: visible">
+        <img align="left" id="back_arrow" src="images/back_arrow.png" width="18px" height="20px"
+             style="visibility: hidden; padding-top: 8px">
+        <img src="images/pixel_logo.png" width="180px" height="30px">
+        <br><span width="24px" height="24px" style="display: flex; justify-content: start; padding-left: 30px">Optimise image load times in seconds.</span><br><br>
+        <input type="text" id="searchBar" placeholder="Search here..." style="display: none">
 
-    <div id="spinner-container" >
-        <div id="spinner" class="lds-dual-ring" align="center"></div>
-    </div>
-</head>
-<body>
-<div id="popupContainer"> <!-- Add this div -->
-    <label for="imageInput" class="custom-file-upload" >
-        <img  id ="imageSelect" src="images/select_file.png" height="55px" width="292px" alt="Select File" title="Select File" />
-    </label>
-    <input type="file" id="imageInput" accept="image/*" style="display: none;">
-    <span id="fileName"></span>
-    <img id="uploadButton" src="images/upload.png" height="40px" width="292px" alt="Upload Images" title="Upload Images" />
+        <div id="spinner-container">
+            <div id="spinner" class="lds-dual-ring" align="center"></div>
+        </div>
+    </head>
+    <body>
+    <div id="popupContainer"> <!-- Add this div -->
+        <label for="imageInput" class="custom-file-upload">
+            <img id="imageSelect" src="images/select_file.png" height="55px" width="328px" alt="Select File"
+                 title="Select File"/>
+        </label>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        <span id="fileName"></span>
+        <img id="uploadButton" src="images/upload.png" height="50px" width="332px" alt="Upload Images"
+             title="Upload Images" style="margin: 6px 0"
+        />
 
-    <div id="progressBarContainer" style="display:none;">
-        <div id="progressBar" style="width: 0%;"></div>
-    </div>
-    <button id="previewButton" style="display:none;">Preview</button>
-    <div class="list-images">
-    <!--<button id="listImagesButton">List Images</button>-->
-        <img id="listImagesButton" src="images/list.png" height="20px" width="20px" alt="List Images" title="List Images" />
+        <div id="progressBarContainer" style="display:none;">
+            <div id="progressBar" style="width: 0%;"></div>
+        </div>
+        <button id="previewButton" style="display:none;">Preview</button>
+        <div class="list-images">
+            <!--<button id="listImagesButton">List Images</button>-->
+            <img id="listImagesButton" src="images/list.png" height="20px" width="20px" alt="List Images"
+                 title="List Images"/>
 
-    </div>
-    <div class="search-images">
-    <img id="searchButton" src="images/search.png" height="20px" width="20px" alt="search" title="search" />
-</div>
-    <!-- Link to Settings -->
-    <div class="settings-link" id="settingsLink"> <img  src="images/settings.png" height="20px" width="20px" alt="Settings" title="Settings" /></div>
+        </div>
+        <div class="search-images">
+            <img id="searchButton" src="images/search.png" height="20px" width="20px" alt="search" title="search"/>
+        </div>
+        <!-- Link to Settings -->
+        <div class="settings-link" id="settingsLink"><img src="images/settings.png" height="20px" width="20px"
+                                                          alt="Settings" title="Settings"/></div>
 
-    <!-- Hidden Settings Screen -->
-    <div id="settingsScreen" style="display:none;">
-        <input type="text" id="authCodeInput" placeholder="">
-        <img id="saveAuthCodeButton" src="images/save_auth.png" alt="Save Auth Key" title="Save Auth Key" />
-        <button id="retrieveAuthCodeButton" style="visibility: hidden">Retrieve Auth</button>
-        <button id="removeAuthCodeButton">Remove Auth</button>
-    </div>
+        <!-- Hidden Settings Screen -->
+        <div id="settingsScreen" style="display:none;">
+            <input type="text" id="authCodeInput" placeholder="" style="width: 320px; height: 40px; outline: none; border: none; background-color: #EEEEEE; border-radius: 10px">
+            <img id="saveAuthCodeButton" src="images/save_auth.png" alt="Save Auth Key" title="Save Auth Key" height="0px" width="100%" style="visibility: hidden; margin: 5px 0"/>
+            <img id="removeAuthCodeButton" src="images/remove_auth.png" width="328px" height="45px">
+            <button id="retrieveAuthCodeButton" style="visibility: hidden">Retrieve Auth</button>
+<!--            <button id="removeAuthCodeButton" style="width: 100%">Remove Auth</button>-->
+        </div>
 
 
-    <!-- Container to display the list of images -->
-    <div id="imageListContainer" style="display:none;">
-        <h3></h3>
-        <ul id="imageList"></ul>
-    </div>
+        <!-- Container to display the list of images -->
+        <div id="imageListContainer" style="display:none;">
+            <h3></h3>
+            <ul id="imageList"></ul>
+        </div>
 
-    <!-- CDN URL Display and Copy Button -->
-    <div id="cdnUrlContainer" style="display:none;">
-        <b>CDN: </b> <input type="text" id="cdnUrlDisplay" readonly>
-        <img id="copyCdnUrlButton" src="images/copy.png" height="24px" weight ='24px'></img>
-    </div>
+        <!-- CDN URL Display and Copy Button -->
+        <div id="cdnUrlContainer" style="display:none;">
+            <b>CDN: </b> <input type="text" id="cdnUrlDisplay" readonly>
+            <img id="copyCdnUrlButton" src="images/copy.png" height="24px" weight='24px' style="cursor: pointer"></img>
+        </div>
 
-    <img id="uploadedImage" style="display:none; max-width: 100%; height: auto;" />
+        <img id="uploadedImage" style="display:none; max-width: 100%; height: auto;"/>
 
-</div> <!-- Close the popupContainer div -->
-<script src="popup.js"></script>
-</body>
-</html>
+    </div> <!-- Close the popupContainer div -->
+    <script src="popup.js"></script>
+    </body>
+    </html>
